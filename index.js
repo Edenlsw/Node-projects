@@ -11,8 +11,17 @@ const eden = {
     lastName: 'Smith-Wint',
     faveFood: 'Fruit- mainly grapes',
     faveColour: 'Purple',
-    Occupation: 'Civil Servant'
+    Occupation: 'Civil Servant',
+    
 };
+
+const facts = [
+    'my name is eden',
+    'i live in brum',
+    'i hope the facts works'
+]
+    
+
 
 // routes (include a banana route)
 
@@ -28,10 +37,20 @@ app.get ('/banana', (req, res) => {
     res.json({ message: 'The yellow fruit'})
 });
 
+// random fact generate
+app.get('/woop', (req, res) => {
+    const randomIndex = Math.floor(Math.random 
+        () * facts.length)
+    const randomFact = facts[randomIndex]
+    res.json ({
+        
+        fact:randomFact
+    })    
+})
 
 // code to start the server 
 
-app.listen(2020, () => {
+app.listen(2019, () => {
     console.log('You did it, it is working, woop woop !!!!!')
 })
 
