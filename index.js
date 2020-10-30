@@ -43,7 +43,7 @@ app.get('/woop', (req, res) => {
         () * facts.length)
     const randomFact = facts[randomIndex]
     res.json ({
-        
+        ...eden,
         fact:randomFact
     })    
 })
